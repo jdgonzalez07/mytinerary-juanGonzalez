@@ -1,0 +1,7 @@
+.cities-container{
+    background-color: #F2E3D5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}

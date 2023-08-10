@@ -1,0 +1,53 @@
+.app-hero {
+  background-color: #F2E3D5;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  min-height: 90vh;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 2rem; */
+
+}
+
+.app-hero h3 {
+  color: #3CA6A6;
+}
+
+.app-hero p {
+  font-weight: bold;
+  color: #012E40;
+}
+
+
+
+
+/* app-btn{
+  text-decoration: none;
+  color:#F2E3D5 ;
+
+} */
+.container-anchor{
+  margin-top: 3rem;
+}
+
+.anchor-hero{
+  padding: 0.8rem;
+  text-decoration: none;
+  color:#F2E3D5 ;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #4193A6;
+}
+
+.carrousel{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.carrousel h2 {
+  color: #3CA6A6;
+}
