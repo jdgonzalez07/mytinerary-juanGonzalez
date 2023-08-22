@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <div className="app-hero">
       <main>
-        <section>
+        <section className="section-hero">
           <h3>
             Find your perfect trip, designed by inside who know and love their
             cities!.

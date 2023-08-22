@@ -1,0 +1,9 @@
+.container-cities {
+    background-color: #F2E3D5;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    min-height: 90vh;
+    align-items: center;
+}
+

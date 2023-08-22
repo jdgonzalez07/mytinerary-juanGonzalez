@@ -1,11 +1,12 @@
-import "../Cities/cities.css"
+import HeroCities from "../../components/HeroCities/HeroCities";
+import "../Cities/cities.css";
 
 const Cities = () => {
-    return (
-        <div className="cities-container">
-            <h2>Estoy en Cities</h2>
-        </div>
-    );
-}
+  return (
+    <main>
+      <HeroCities/>
+    </main>
+  );
+};
 
 export default Cities;
