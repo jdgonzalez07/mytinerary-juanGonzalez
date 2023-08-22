@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./details.css";
 import { Card } from "react-bootstrap";
+import { Link as Anchor } from "react-router-dom";
 
 const Details = () => {
   const { _id } = useParams();
@@ -26,10 +27,10 @@ const Details = () => {
   }, [_id]);
 
   const uniqueCity = city.find((info) => info._id == _id);
-  console.log(uniqueCity); 
+  console.log(uniqueCity);
 
-  if(loading){
-    return <div>Loading...</div>
+  if (loading) {
+    return <div>Loading...</div>;
   }
 
   if (error) {
@@ -37,8 +38,10 @@ const Details = () => {
   }
 
   return (
- <div className="container-details">
+    <div className="container-details">
+      <Anchor className="btn-details" to={"/cities"}>Back</Anchor>
       <div className="card card-detail">
+        
         <Card.Img
           variant="top"
           src={uniqueCity.src}
@@ -46,10 +49,16 @@ const Details = () => {
           className="img-card-detail"
         />
         <div className="card-body">
-        <Card.Title className="title-detail">{uniqueCity?.name}</Card.Title>
-        <Card.Subtitle className="subtitle-detail">{uniqueCity?.country}</Card.Subtitle>
-        <Card.Text className="text-detail">{uniqueCity?.description}</Card.Text>
-        <Card.Text className="population-detail">{uniqueCity?.population}</Card.Text>
+          <Card.Title className="title-detail">{uniqueCity?.name}</Card.Title>
+          <Card.Subtitle className="subtitle-detail">
+            {uniqueCity?.country}
+          </Card.Subtitle>
+          <Card.Text className="text-detail">
+            {uniqueCity?.description}
+          </Card.Text>
+          <Card.Text className="population-detail">
+            {uniqueCity?.population}
+          </Card.Text>
           {/* Mostrar otros detalles del producto */}
         </div>
       </div>
