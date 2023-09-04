@@ -37,10 +37,11 @@
     margin-top: 5rem;
 }
 
-.card {
+.card-cities{
     box-shadow: 2rem 2rem 6rem 1rem black;
     width: 18rem;
     height: 340px;
+
 }
 
 .btn-card{

@@ -1,32 +1,58 @@
 import { Card, Form, FormControl } from "react-bootstrap";
 import "../CardsCities/cardscities.css";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link as Anchor } from "react-router-dom";
 //import { AiOutlineSearch } from "react-icons/ai";
-import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { getCities, filterCities } from "../../redux/actions/citiesActions.js";
 
 const CardsCities = () => {
-  const [city, setCity] = useState([]);
+  /* const [city, setCity] = useState([]); */
+  const cities = useSelector((store) => store.citiesReducer);
+  const searchItem = useRef(null);
+  const dispatch = useDispatch();
+  const [loading, setLoading] = useState(true);
 
-  try {
-    useEffect(() => {
-      axios("http://localhost:3000/api/cities").then((res) =>
-        setCity(res.data.response)
-      );
-    }, []);
-  } catch (error) {
-    console.log(error);
+  useEffect(() => {
+    dispatch(getCities())
+    .then(() => {
+      setLoading(false); // Marcar como cargado una vez se completan las llamadas
+    })
+    .catch((error) => {
+      setLoading(false); // Manejar errores y marcar como cargado en caso de error
+      console.error("Error al cargar datos:", error);
+    });
+  }, []);
+
+  if (loading) {
+    // Muestra un loader mientras los datos se están cargando
+    return (
+      <div className="loader-container">
+        <div className="loader"></div>
+      </div>
+    );
   }
 
-  const [item, setItem] = useState("");
-
-  const searchItem = (event) => {
-    setItem(event.target.value);
+  /*   const [item, setItem] = useState("");
+       const searchItem = (event) => {
+     setItem(event.target.value);
   };
+  
 
-  const datafiltered = city.filter((city) =>
+  const datafiltered = cities.filter((city) =>
     city.name.toLowerCase().startsWith(item.toLowerCase())
   );
+ */
+
+  const handleInput = () => {
+    const search = searchItem.current.value;
+
+    dispatch(filterCities(search))
+
+    
+  };
+
+  
 
   return (
     <>
@@ -35,15 +61,16 @@ const CardsCities = () => {
           type="text"
           placeholder="Search yours cities "
           className="lg-3 input-search "
-          onChange={searchItem}
+          onInput={handleInput}
+          ref={searchItem}
         />
       </Form>
       <div className="card-list">
-        {datafiltered.length === 0 ? (
+        {cities.filteredCities.length === 0 ? (
           <h1>¡ Try Again😢 !</h1>
         ) : (
-          datafiltered.map((item, index) => (
-            <Card key={index} className="card-s m-4">
+          cities.filteredCities.map((item, index) => (
+            <Card key={index} className="card-s m-4 card-cities">
               <Card.Img
                 variant="top"
                 src={item.src}
@@ -70,8 +97,3 @@ const CardsCities = () => {
 };
 
 export default CardsCities;
-{
-  /*  <Button variant="outline-primary" className="mt-2">
-          Search <AiOutlineSearch />
-        </Button> */
-}

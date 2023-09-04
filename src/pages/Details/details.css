@@ -1,14 +1,26 @@
+
+
+
 .container-details {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-    min-height: 85vh;
+    min-height: 100vh;
+    background-color:#F2E3D5
+    
+
+   
+
 }
 
 .card-detail {
     height: 600px;
     display: flex;
-    width: 35rem;
+    width: 65vw;
+    box-shadow:  0.5rem 0.5rem 1rem black;
+    margin-bottom: 1.5rem;
+
 }
 
 
@@ -48,10 +60,16 @@
 }
 
 .btn-details {
+    /* position: relative; */
     position: relative;
-    bottom: 17.5rem;
-    right: 0.2rem;
+    /* bottom: 17.5rem; */
+    
+    /* right: 0.2rem; */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     padding: 0.5rem;
+    text-align: center;
+    width: 5rem;
     border: none;
     border-radius: 0.5rem;
     background-color: brown;
@@ -64,4 +82,5 @@
     .card {
         margin: 1rem;
     }
+    
 }
