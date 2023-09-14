@@ -21,11 +21,7 @@ const citiesReducer = createReducer(initialState, (builder) =>
       const newState = { ...stateActual, city: action.payload };
       return newState;
     })
-    /* .addCase(getCity.pending, (stateActual, action) => {
-      console.log("pending");
-      const newState = { ...stateActual, city: action.payload, loading: true};
-      return newState;
-    }) */
+
     .addCase(getCities.fulfilled, (stateActual, action) => {
       console.log("fulfilled");
       const newState = {
@@ -35,24 +31,12 @@ const citiesReducer = createReducer(initialState, (builder) =>
       };
       return newState;
     })
-    /* .addCase(getCities.pending, (stateActual, action) => {
-      console.log("pending");
-      const newState = {
-        ...stateActual,
-        cities: action.payload,
-        filteredCities: action.payload,
-        loading:true
-      };
-      return newState;
-    }) */
+
     .addCase(getItinerary.fulfilled, (stateActual, action) => {
       const newState = { ...stateActual, itinerary: action.payload };
       return newState;
     })
-    /* .addCase(getItinerary.pending, (stateActual, action) => {
-      const newState = { ...stateActual, loading:true };
-      return newState;
-    }) */
+
     .addCase(filterCities, (stateActual, action) => {
       const filterSearch = stateActual.cities.filter(
         (city) =>
