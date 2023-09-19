@@ -10,8 +10,8 @@ const slices = [
         name: "Buenos Aires",
         country: "Argentina",
       },
-      { src: "public/londres.jpg", name: "Londres", country: "England" },
-      { src: "public/ibiza.png", name: "Ibiza", country: "Spain" },
+      { src: "public/londres2.jpg", name: "Londres", country: "England" },
+      { src: "public/ibiza2.jpg", name: "Ibiza", country: "Spain" },
       { src: "public/miami.jpg", name: "Miami", country: "United State" },
     ],
   },
@@ -19,7 +19,7 @@ const slices = [
     images: [
       { src: "public/madrid.jpg", name: "Madrid", country: "Spain" },
       {
-        src: "public/rio-de-janeiro.jpg",
+        src: "public/rio-de-janeiro2.jpg",
         name: "Rio de Janeiro",
         country: "Brasil",
       },
@@ -34,13 +34,12 @@ const slices = [
   {
     images: [
       { src: "public/new-york.jpg", name: "New York", country: "United State" },
-      { src: "public/sidney.jpg", name: "Sidney", country: "Australia" },
-      { src: "public/paris.jpg", name: "Paris", country: "France" },
-      { src: "public/toronto.jpg", name: "Toronto", country: "Canada" },
+      { src: "public/sidney2.jpg", name: "Sidney", country: "Australia" },
+      { src: "public/paris2.jpg", name: "Paris", country: "France" },
+      { src: "public/toronto2.jpg", name: "Toronto", country: "Canada" },
     ],
   },
 ];
-
 function CarouselComponent() {
   return (
     <Carousel>

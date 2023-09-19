@@ -1,3 +1,4 @@
+import { Link as Anchor} from "react-router-dom";
 import "../Footer/footer.css";
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
@@ -32,6 +33,20 @@ const Footer = () => {
             </li>
             <li>
               <a href="#">Blog</a>
+            </li>
+          </ul>
+        </div>
+        <div className="footer-section">
+          <h3>Navigation</h3>
+          <ul>
+            <li>
+              <Anchor to="/">Home</Anchor>
+            </li>
+            <li>
+              <Anchor to="/cities">Cities</Anchor>
+            </li>
+            <li>
+              <a href="#">Account</a>
             </li>
           </ul>
         </div>

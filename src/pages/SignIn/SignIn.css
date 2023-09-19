@@ -1,0 +1,76 @@
+.container-signin {
+    display: flex;
+    margin: 5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 80vh;
+    color: white;
+}
+
+.container-signin h5 {
+    font-size: 1.5rem;
+}
+
+.container-form {
+
+    padding: 4rem;
+    background-color: #012E40;
+    border: 1px solid #4193A6;
+    border-radius: 2rem;
+
+}
+
+.div-label {
+    color: aliceblue;
+}
+
+.separator {
+    display: flex;
+    margin-top: 1rem;
+    width: 100%;
+    gap: 15px;
+}
+
+.separator hr {
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid #fff;
+}
+
+.separator span {
+    color: #fff;
+}
+
+.btn-google {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:370px) {
+    .container-form {
+        width: 300px;
+        padding: 4rem;
+        background-color: #012E40;
+        border: 1px solid #4193A6;
+        border-radius: 2rem;
+
+
+    }
+
+}
+
+@media(max-width:310px) {
+    .container-form {
+        width: 250px;
+        padding: 4rem;
+        background-color: #012E40;
+        border: 1px solid #4193A6;
+        border-radius: 2rem;
+
+
+    }
+
+}
+

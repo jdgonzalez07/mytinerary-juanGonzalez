@@ -1,0 +1,75 @@
+.container-singUp{
+    display: flex;
+    margin: 5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    color: white;
+}
+
+.container-singUp h5{
+    font-size: 1.5rem;
+}
+
+.container-form-signup {
+    padding: 3rem;
+    background-color: #012E40;
+    border: 1px solid #4193A6;
+    border-radius: 2rem;
+}
+
+.div-label {
+    color: aliceblue;
+}
+
+.separator {
+    display: flex;
+    margin-top: 1rem;
+    width: 100%;
+    gap: 15px;
+}
+
+.separator hr {
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid #fff;
+}
+
+.separator span {
+    color:#fff ;
+}
+
+.btn-google{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@media (max-width:370px) {
+    .container-form-signup {
+        width: 300px;
+        padding: 4rem;
+        background-color: #012E40;
+        border: 1px solid #4193A6;
+        border-radius: 2rem;
+
+
+    }
+
+}
+
+@media(max-width:310px) {
+    .container-form-signup {
+        width: 250px;
+        padding: 4rem;
+        background-color: #012E40;
+        border: 1px solid #4193A6;
+        border-radius: 2rem;
+
+
+    }
+
+}

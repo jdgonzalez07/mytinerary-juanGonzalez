@@ -10,23 +10,23 @@
 
 }
 
+.section-hero{
+  margin-top: 0.5rem;
+  background-color: #012E40;
+  border: 2px solid #4193A6;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
 .app-hero h3 {
   color: #3CA6A6;
 }
 
 .app-hero p {
   font-weight: bold;
-  color: #012E40;
+  color: #F2E3D5;
 }
 
-
-
-
-/* app-btn{
-  text-decoration: none;
-  color:#F2E3D5 ;
-
-} */
 .container-anchor{
   margin-top: 3rem;
 }
@@ -50,4 +50,13 @@
 
 .carrousel h2 {
   color: #3CA6A6;
+ 
 }
+
+@media (min-width:250px) and (max-width:350px){
+
+  .section-hero{
+    margin-top: 0.5rem;
+    max-width: 270px;
+  }
+ }

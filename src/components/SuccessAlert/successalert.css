@@ -1,0 +1,21 @@
+
+.success-alert {
+  background-color: #4caf50;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: top 0.5s ease;
+}
+
+.success-alert p {
+  margin: 0;
+}
+
+
+.success-alert.hidden {
+  top: -100px;
+}
